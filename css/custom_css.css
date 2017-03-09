@@ -1,0 +1,102 @@
+.website{
+    margin-top: 42px;
+    height: 180px;
+    width: 230px;
+    border: 2px solid red;
+    background-color: gray;
+}
+body
+{
+    padding: 50px; /* For this demo only */
+}
+
+.circle
+{
+    display: block;
+    background: #3498db;
+    width: 120px;  /* Can be any size you want */
+    height: 120px; /* Can be any size you want */
+    border-radius: 50%; /* Makes the div a circle */
+    position: relative; /* Allows you to position the pseudo elements */
+}
+
+.circle:before, .circle:after
+{
+    display: block;
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.circle:before
+{
+    width: 4px;
+    height: 32px;
+    top: calc(50% - 16px); /* 16px = half of the height */
+    left: calc(50% - 2px); /* 2px = half of the width */
+}
+
+.circle:after
+{
+    width: 32px;
+    height: 4px;
+    top: calc(50% - 2px);   /* 2px = half of the height */
+    left: calc(50% - 16px); /* 16px = half of the width */
+}
+#add a:hover{
+        background-color: greenyellow;
+    }
+    div.website :hover{
+        background-color: red;
+    } 
+    div#add :hover{
+        background-color: greenyellow;;
+    }   
+    
+/*---four-grids-----*/ 
+.four-agileits {
+    margin-bottom: 25px;
+    background: #ff4a43;
+    text-align: center;
+    padding: 2em 0;
+}
+.four-agileinfo {
+    background: #22beef;
+    padding: 2em 0;
+    text-align: center;
+}
+.four-w3ls {
+    background: #a2d200;
+    padding: 2em 0;
+    text-align: center;
+}
+.four-wthree {
+    background: #8e44ad;
+    padding: 2em 0;
+    text-align: center;
+}
+.four-grid:nth-child(1) {
+    padding-left: 0;
+}
+.four-grid:nth-child(4) {
+    padding-right: 0;
+}
+.four-grids {
+    margin: 2em 0;
+}
+.four-grid i.glyphicon {
+    color: #fff;
+    font-size: 32px;
+}
+.four-grid h3 {
+    font-size: 20px;
+    color: #fff;
+    margin: 14px 0;
+}
+.four-grids h4 {
+    font-size: 30px;
+    color: #fff;
+    margin: 0;
+}
+/*---//four-grids-----*/     
