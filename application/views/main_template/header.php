@@ -161,7 +161,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                                                       if($sub['parent']==$cat_id)
                                                       {
                                                           
-                                                          echo '<li><a href="care.html"> <i class="fa fa-angle-right" aria-hidden="true"></i>'.$sub['slug'].' </a></li>';
+                                                          echo '<li><a href="'.base_url()."index.php/Main_site/websites_list_subcategorywise?id=".$sub['id'].'"> <i class="fa fa-angle-right" aria-hidden="true"></i>'.$sub['slug'].' </a></li>';
                                                       }
                                                   }
                                               }

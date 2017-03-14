@@ -56,4 +56,14 @@ class Main_Template_Model extends CI_Model {
         //$result->result_array();
         //echo $this->db->last_query();       
     }
+    function get_subcategory_wise_websites($subcategory_id)
+    {
+        $this->db->select('*');
+        $this->db->from('site');
+        $this->db->where('subcategory_id',$subcategory_id);
+        $query = $this->db->get();
+        return $query->result_array();
+        
+        
+    }
 }

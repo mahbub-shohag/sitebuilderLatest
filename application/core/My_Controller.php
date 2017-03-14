@@ -21,7 +21,12 @@ class My_Admin_Controller extends CI_Controller{
         $this->load->view($view,$data);
         $this->load->view('common/ofooter');
     }
-       function render_edu($view=null,$data=null)
+    function render_school($view=NULL,$data=NULL)
+    {
+        $this->load->view('templates/school/header');
+        $this->load->view($view,$data);    
+    }
+    function render_edu($view=null,$data=null)
     {
         $this->load->view('common/education/oheader',$data);
         $this->load->view($view,$data);

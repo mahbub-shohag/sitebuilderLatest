@@ -113,5 +113,14 @@ function index()
     $data['menus'] = $this->get_menus();
     $this->render_main('main_template/index',$data);   
 }
+
+function websites_list_subcategorywise()
+{
+    $subcategory_id = $_GET['id'];
+    $sites = $this->Main_Template_Model->get_subcategory_wise_websites($subcategory_id);
+    $data['sites'] = $sites;
+    //print_r($sites);exit;
+    $this->render_main('main_template/websites',$data);
+}
     
 }

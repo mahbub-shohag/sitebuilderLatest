@@ -40,9 +40,7 @@ redirect('Main_Site/login');
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url();?>/build/css/custom.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/css/custom_css.css" rel="stylesheet">
-   
- 
-    
+  
     
     
   </head>
@@ -80,7 +78,7 @@ redirect('Main_Site/login');
                   </li>
                   <li><a><i class="fa fa-edit"></i> Index Content <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.html">Home Event</a></li>
+                      <li id="home">Home Event</li>
                       <li><a href="form_advanced.html">Home Gallery</a></li>
                       <li><a href="form_validation.html">Home News</a></li>
                     </ul>
@@ -240,3 +238,8 @@ redirect('Main_Site/login');
           </div>
         </div>
         <!-- /top navigation -->
+    <script>
+       $('#home').on('click',function(){
+          alert($(this).html()); 
+       });   
+    </script>

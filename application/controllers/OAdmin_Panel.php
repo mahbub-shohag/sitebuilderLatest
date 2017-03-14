@@ -126,7 +126,7 @@ function get_subcategories()
     
     //print_r($subcategories);exit;
 }
-        function education()
+function education()
 {
     $this->load->view('education/header');
      $this->load->view('education/menu_header');
