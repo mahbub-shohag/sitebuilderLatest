@@ -11,7 +11,6 @@ redirect('Main_Site/login');
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -19,8 +18,10 @@ redirect('Main_Site/login');
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Mini Bangladesh! | </title>
+    
+    <link href="<?php echo base_url(); ?>/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome 
@@ -40,8 +41,8 @@ redirect('Main_Site/login');
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url();?>/build/css/custom.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/css/custom_css.css" rel="stylesheet">
-  
-    
+<!--    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>-->
+    <script src="<?php echo base_url();?>/vendors/jquery/dist/jquery.min.js"></script>
     
   </head>
   <body class="nav-md">
@@ -78,12 +79,12 @@ redirect('Main_Site/login');
                   </li>
                   <li><a><i class="fa fa-edit"></i> Index Content <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li id="home">Home Event</li>
+                      <li data-toggle="modal" data-target="#homeModal" id="home">Home Event</li>
                       <li><a href="form_advanced.html">Home Gallery</a></li>
                       <li><a href="form_validation.html">Home News</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> About <span class="fa fa-chevron-down"></span></a>
+                  <li data-toggle="modal" data-target="#aboutModal"><a><i class="fa fa-desktop"></i> About <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>
                       <li><a href="media_gallery.html">Media Gallery</a></li>
@@ -237,9 +238,28 @@ redirect('Main_Site/login');
             </nav>
           </div>
         </div>
-        <!-- /top navigation -->
+        
+        <!-- /top navigation -->       
     <script>
-       $('#home').on('click',function(){
-          alert($(this).html()); 
-       });   
+       
+    $(document).ready(function(){
+        //alert('hello');
+        
+        $('#home').on('click',function(){
+            //alert('Yes');
+            $('#modals').html('');
+            var user_id = 1;
+            $.ajax({
+                method : "POST",
+                url : "<?php echo base_url(); ?>index.php/Site_Admin/load_modal",
+                data : {user_id,user_id},
+                success : function(data){
+                    //alert(data);
+                $('#modals').html(data);
+                $('#homeModal').modal('show');
+            }
+        });
+    });
+    });
+         
     </script>

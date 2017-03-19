@@ -25,6 +25,27 @@ class Site_model extends CI_Model{
         $query = $this->db->get();
         return $query->row();
     }
+    function insert_data($table,$data)
+    {
+        return $this->db->insert('index',$data);
+    }
+    function get_index_row($site_id)
+    {
+        $this->db->select('*');
+        $this->db->from('index');
+        $this->db->where('site_id',$site_id);
+        $query = $this->db->get();
+        //echo $query;exit;
+        $row = $query->row();
+        //print_r($row);exit;
+        return $row;
+    }
+    function update_data($tabel=null,$site_id,$data)
+    {  
+        //echo $table;exit;
+        $this->db->where('site_id', $site_id);
+        $this->db->update('index', $data); 
+    }
    
    
 }

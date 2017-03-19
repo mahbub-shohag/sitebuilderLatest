@@ -93,20 +93,20 @@ function logout()
 }
 
 function upload_original($foo)
-{   
-$folder ="image/profile/";
-       $images['profile_picture'] = $folder.$foo->file_src_name_body.".jpg";
-if ($foo->uploaded) {
-       
-   // save uploaded image with no changes
-   $foo->Process($folder);
-   if ($foo->processed) {
-     return $images['profile_picture'];
-   } else {
-     echo 'error : ' . $foo->error;
-   }
-}
-}
+    {   
+        $folder ="image/profile/";
+        $images['profile_picture'] = $folder.$foo->file_src_name_body.".jpg";
+        if ($foo->uploaded) {
+
+       // save uploaded image with no changes
+        $foo->Process($folder);
+        if ($foo->processed) {
+          return $images['profile_picture'];
+        } else {
+          echo 'error : ' . $foo->error;
+        }
+     }
+    }
 
 function index()
 {
