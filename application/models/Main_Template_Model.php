@@ -57,13 +57,15 @@ class Main_Template_Model extends CI_Model {
         //echo $this->db->last_query();       
     }
     function get_subcategory_wise_websites($subcategory_id)
-    {
-        $this->db->select('*');
+    { 
+        $this->db->select('site.id, site.domain, site.website_caption, domain_type.slug domain_type, category.slug category, subcategory.slug subcategory');
         $this->db->from('site');
+        $this->db->join('_cats domain_type' , 'site.domain_type = domain_type.id', 'inner');
+        $this->db->join('_cats category' , 'site.category_id = category.id', 'inner');
+        $this->db->join('_cats subcategory' , 'subcategory.id = site.subcategory_id', 'inner');
         $this->db->where('subcategory_id',$subcategory_id);
         $query = $this->db->get();
-        return $query->result_array();
-        
-        
+        //echo $query;exit;
+        return $query->result_array();  
     }
 }

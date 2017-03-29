@@ -84,19 +84,7 @@ redirect('Main_Site/login');
                       <li><a href="form_validation.html">Home News</a></li>
                     </ul>
                   </li>
-                  <li data-toggle="modal" data-target="#aboutModal"><a><i class="fa fa-desktop"></i> About <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="general_elements.html">General Elements</a></li>
-                      <li><a href="media_gallery.html">Media Gallery</a></li>
-                      <li><a href="typography.html">Typography</a></li>
-                      <li><a href="icons.html">Icons</a></li>
-                      <li><a href="glyphicons.html">Glyphicons</a></li>
-                      <li><a href="widgets.html">Widgets</a></li>
-                      <li><a href="invoice.html">Invoice</a></li>
-                      <li><a href="inbox.html">Inbox</a></li>
-                      <li><a href="calendar.html">Calendar</a></li>
-                    </ul>
-                  </li>
+                  <li id="about"><a><i class="fa fa-desktop"></i> About <span class="fa fa-chevron-down"></span></a></li>
                   <li><a><i class="fa fa-table"></i> Contact <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="tables.html">Tables</a></li>
@@ -220,7 +208,7 @@ redirect('Main_Site/login');
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where<?php echo base_url();?>.
+                          Film festivals used to be do-or-die moments for movie makers. They were where<?php echo base_url();?>
                         </span>
                       </a>
                     </li>
@@ -252,13 +240,28 @@ redirect('Main_Site/login');
             $.ajax({
                 method : "POST",
                 url : "<?php echo base_url(); ?>index.php/Site_Admin/load_modal",
-                data : {user_id,user_id},
+                data : {user_id : user_id},
                 success : function(data){
-                    //alert(data);
+                //alert(data);
                 $('#modals').html(data);
                 $('#homeModal').modal('show');
             }
         });
+    });
+    
+        $('#about').on('click',function(){
+        $('#modal').html('');
+        var user_id = 1;
+        $.ajax({
+        method : "POST",
+        url : "<?php echo base_url(); ?>index.php/School_About/about",
+        data : {user_id : user_id},
+        success : function(data){
+            $('#modals').html(data);
+            $('#aboutModal').modal('show');
+        
+    }
+        })
     });
     });
          

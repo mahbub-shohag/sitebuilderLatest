@@ -14,7 +14,7 @@
                     </div>
                     <div>
                         <?php
-                          if($index_row) {
+                          if(isset($index_row)) {
                          
                               echo '<input type="submit" name="update" value="Update">'; 
                           }

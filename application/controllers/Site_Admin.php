@@ -143,9 +143,19 @@ $this->load->library('Upload');
         $data['site_info'] = $site_info;
         $this->render_edu('education_admin/education_admin_dashboard',$data);
     }
-    function browse_school()
+    function browse_school($template_id=NULL, $site_id)
     {
-        $this->render_school('templates/school/index');
+        if($template_id ==1){
+            
+           $this->render_school('templates/school/index'); 
+        }
+        else if($template_id==2){
+            
+        }
+        else{
+            
+        }
+        
     }
  
 }

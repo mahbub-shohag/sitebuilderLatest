@@ -15,6 +15,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="<?php echo base_url();?>/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="<?php echo base_url();?>/css/style.css" rel='stylesheet' type='text/css' />
+<link href="//cdn.datatables.net/fixedcolumns/3.2.2/css/fixedColumns.dataTables.min.css">
 <!-- js -->
    <script src="<?php echo base_url();?>/js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -29,6 +30,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		});
 	});
 </script>
+<script src="<?php echo base_url();?>/assets/js/plugins/tables/datatables/datatables.min.js" type="text/javascript"></script>
 <!-- start-smoth-scrolling -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>

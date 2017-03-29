@@ -116,6 +116,7 @@ function index()
 
 function websites_list_subcategorywise()
 {
+    $data['menus'] = $this->get_menus();
     $subcategory_id = $_GET['id'];
     $sites = $this->Main_Template_Model->get_subcategory_wise_websites($subcategory_id);
     $data['sites'] = $sites;

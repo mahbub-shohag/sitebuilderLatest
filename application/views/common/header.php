@@ -14,7 +14,7 @@
         <link href="<?php echo base_url(); ?>/assets/css/minified/components.min.css" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url(); ?>/assets/css/minified/colors.min.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
-
+           <link href="<?php echo base_url(); ?>/https://cdn.datatables.net/fixedcolumns/3.2.2/css/fixedColumns.dataTables.min.css>
 	<!-- Core JS files -->
         <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/plugins/loaders/pace.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/core/libraries/jquery.min.js"></script>
@@ -40,9 +40,9 @@
          <script
 			  src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"
 			  integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
-			  crossorigin="anonymous"></script>
+			  crossorigin="anonymous"></script>                
 	<!-- /theme JS files -->
-
+        <script src="<?php echo base_url(); ?>assets/js/plugins/tables/datatables/datatables.min.js" type="text/javascript"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
   
   
