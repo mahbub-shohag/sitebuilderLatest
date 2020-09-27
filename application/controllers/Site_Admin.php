@@ -134,17 +134,22 @@ $this->load->library('Upload');
     
      function set_site_info_to_site($site_id)
     {
-        $site_id = $_GET['site_id'];
+        echo $site_id;
+        //exit;
         //$site_detail = $this->Site_model->get_site_info($site_id);
         $data['site_id'] = $site_id;
         //echo $site_id;
         $site_info = $this->Site_model->get_site_info($site_id);
+        //echo '<pre>';print_r($site_id);exit;
         $this->session->set_userdata('site_id',$site_id);
         $data['site_info'] = $site_info;
         $this->render_edu('education_admin/education_admin_dashboard',$data);
     }
-    function browse_school($template_id=NULL, $site_id)
+    function browse_school($site_id=NULL,$template_id=1)
+
     {
+        //echo $template_id;
+        //echo $site_id;
         if($template_id ==1){
             
            $this->render_school('templates/school/index'); 

@@ -13,7 +13,7 @@
                         <div class="main-agileits">
 				<div class="form-w3agile form1">
 					<h3>Register</h3>
-                                        <form action="<?php echo base_url();?>/index.php/Main_Site/registration" method="post" enctype="multipart/form-data">
+                                        <form action="<?php echo base_url();?>index.php/Main_Site/registration" method="post" enctype="multipart/form-data">
 					    <div class="key">
 							<i class="fa fa-user" aria-hidden="true"></i>
 							<input  type="text" value="Full Name" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Full Name';}" required="">

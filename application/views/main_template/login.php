@@ -22,7 +22,7 @@
 		<div class="main-agileits">
 				<div class="form-w3agile">
 					<h3>Login</h3>
-                                        <form action="<?php echo base_url();?>/index.php/Main_Site/login" method="post">
+                                        <form action="<?php echo base_url();?>index.php/Main_Site/login" method="post">
 						<div class="key">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 							<input  type="text" value="Email" name="user_name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
@@ -38,7 +38,7 @@
 				</div>
 				<div class="forg">
 					<a href="#" class="forg-left">Forgot Password</a>
-					<a href="<?php echo base_url();?>/index.php/Main_Site/registration" class="forg-right">Register</a>
+					<a href="<?php echo base_url();?>index.php/Main_Site/registration" class="forg-right">Register</a>
 				<div class="clearfix"></div>
 				</div>
 			</div>

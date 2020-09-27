@@ -62,10 +62,14 @@ function logout()
     $this->session->unset_userdata($user_data);
     redirect('Main_Site/login');
 }
-        function registration()
+
+function registration()
 {
  if($_POST)
     {
+           //echo '<pre>';
+           //print_r($_POST);
+           //exit; 
            $images = array();
            $profile_picture = new Upload($_FILES['profile_picture']);
            $profile_picture = $this->upload_original($profile_picture);

@@ -5,7 +5,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_content">
-                      <form action="<?php echo base_url();?>/index.php/OAdmin_Panel/create_site" method="post" class="form-horizontal form-label-left" novalidate>
+                      <form action="<?php echo base_url();?>index.php/OAdmin_Panel/create_site" method="post" class="form-horizontal form-label-left" novalidate>
                       
                     <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Domain Type</label><span class="required">*</span>
@@ -96,7 +96,7 @@ $(document).ready(function(){
    var domain = $('#domain').val();
      $.ajax({
   method: "POST",
-  url: "<?php echo base_url();?>/index.php/OAdmin_Panel/is_domain_exists",
+  url: "<?php echo base_url();?>index.php/OAdmin_Panel/is_domain_exists",
   data: { domain: domain ,domain_type : domain_type}
 })
   .done(function( msg ) {
@@ -114,7 +114,7 @@ var category_id = ($(this).val());
 $.ajax(
         {
           method : "POST",
-          url : "<?php echo base_url();?>/index.php/OAdmin_Panel/get_subcategories",
+          url : "<?php echo base_url();?>index.php/OAdmin_Panel/get_subcategories",
           data : {category_id : category_id}
         })
                 .done(function(data)

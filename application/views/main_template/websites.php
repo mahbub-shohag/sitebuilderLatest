@@ -19,7 +19,7 @@
         <tbody>
             <?php foreach ($sites as $asite): ?>
             <tr>
-                <td><a href="<?php echo base_url().'index.php/Site_Admin/browse_school?id='.$asite['id']?>"><?php echo $asite['domain'].$asite['domain_type']; ?></a></td>
+                <td><a href="<?php echo base_url().'index.php/Site_Admin/browse_school/'.$asite['id']?>"><?php echo $asite['domain'].$asite['domain_type']; ?></a></td>
                 <td><?php echo $asite['subcategory']; ?></td>
                 <td><?php echo $asite['category']; ?></td>
                 <td><?php echo $asite['website_caption']; ?></td>
